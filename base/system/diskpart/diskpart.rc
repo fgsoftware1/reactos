@@ -35,6 +35,3 @@
 #ifdef LANGUAGE_ZH_TW
     #include "lang/zh-TW.rc"
 #endif
-#if LANGUAGE_PT_PT
-    #include "lang/pt-PT.rc"
-#endif
