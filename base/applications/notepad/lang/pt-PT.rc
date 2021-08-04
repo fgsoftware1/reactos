@@ -1,5 +1,3 @@
-/* Translation and UTF-8 Conversion by Gabriel Aguiar(fgsoftware1) <fgygh5804@gmail.com,fgsoftwarestudio@gmail.com> (July, 2021) */
-
 LANGUAGE LANG_PORTUGUESE, SUBLANG_NEUTRAL
 
 ID_ACCEL ACCELERATORS
@@ -26,10 +24,10 @@ BEGIN
     POPUP "&Arquivo"
     BEGIN
         MENUITEM "&Novo\tCtrl+N", CMD_NEW
-        MENUITEM "&Nova janela\tCtrl+Shift+N", CMD_NEW_WINDOW
+        MENUITEM "&New Window\tCtrl+Shift+N", CMD_NEW_WINDOW
         MENUITEM "A&brir\tCtrl+O", CMD_OPEN
-        MENUITEM "&Guardar\tCtrl+S", CMD_SAVE
-        MENUITEM "Guardar &como...", CMD_SAVE_AS
+        MENUITEM "&Salvar\tCtrl+S", CMD_SAVE
+        MENUITEM "Salvar &como...", CMD_SAVE_AS
         MENUITEM SEPARATOR
         MENUITEM "C&onfigurar página...", CMD_PAGE_SETUP
         MENUITEM "&Imprimir...\tCtrl+P", CMD_PRINT
@@ -50,7 +48,7 @@ BEGIN
         MENUITEM "Substituir...\tCtrl+H", CMD_REPLACE
         MENUITEM "Ir Para...\tCtrl+G", CMD_GOTO
         MENUITEM SEPARATOR
-        MENUITEM "Selecionar &tudo", CMD_SELECT_ALL
+        MENUITEM "Seleccionar &tudo", CMD_SELECT_ALL
         MENUITEM "&Data/Hora\tF5", CMD_TIME_DATE
     END
     POPUP "F&ormatar"

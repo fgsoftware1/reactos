@@ -1,5 +1,3 @@
-/* Translation and UTF-8 Conversion by Gabriel Aguiar(fgsoftware1) <fgygh5804@gmail.com,fgsoftwarestudio@gmail.com> (August, 2021) */
-
 LANGUAGE LANG_PORTUGUESE, SUBLANG_NEUTRAL
 
 ID_ACCEL ACCELERATORS
@@ -74,7 +72,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "&Dividir", ID_VIEW_SPLIT
         MENUITEM SEPARATOR
-        MENUITEM "&Atualizar\tF5", ID_VIEW_REFRESH
+        MENUITEM "&Actualizar\tF5", ID_VIEW_REFRESH
     END
     POPUP "&Favoritos"
     BEGIN
@@ -150,7 +148,7 @@ BEGIN
         MENUITEM "&Colar", ID_HEXEDIT_PASTE
         MENUITEM "&Apagar", ID_HEXEDIT_DELETE
         MENUITEM SEPARATOR
-        MENUITEM "Selecionar &Tudo", ID_HEXEDIT_SELECT_ALL
+        MENUITEM "Seleccionar &Tudo", ID_HEXEDIT_SELECT_ALL
     END
 END
 
@@ -301,7 +299,7 @@ BEGIN
     ID_REGISTRY_DISCONNECTNETWORKREGISTRY "Desliga um registo de um computador remoto."
     ID_REGISTRY_PRINT "Imprime todo ou parte do registo."
 /*    ID_HELP_HELPTOPICS "Abre a ajuda do Editor do Registro." */
-    ID_HELP_ABOUT "Mostra informações do programa, número da versão e copyright."
+    ID_HELP_ABOUT "Exibe informações do programa, número da versão e copyright."
 END
 
 STRINGTABLE
