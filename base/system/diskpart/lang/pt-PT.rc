@@ -1,5 +1,5 @@
 /* Translation by Gabriel Aguiar <fgygh5804@gmail.com,fgsoftwarestudio@gmail.com> (Agaust, 2021) */
-------TRANSLATED-------------------------------------------------------------------
+/*------TRANSLATED-------------------------------------------------------------------*/
 LANGUAGE LANG_PORTUGUESE, SUBLANG_NEUTRAL
 
 /* Basic application information */
@@ -113,7 +113,7 @@ BEGIN
     IDS_HELP_CMD_DESC_FORMAT "FORMAT\t\t- Formatar volume ou partição.\n"
     IDS_HELP_CMD_DESC_GPT "GPT\t\t- Definir atributos da partição GPT atualmente selecionada.\n"
     IDS_HELP_CMD_DESC_HELP "HELP\t\t- Mostra a lista de comandos.\n"
-    --------------------------------UNTIL-HERE----------------------------------------------------------------------------------
+/* --------------------------------UNTIL-HERE-------------------------------------------------------------------*/
     IDS_HELP_CMD_DESC_IMPORT "IMPORT\t\t- Import a disk group.\n"
     IDS_HELP_CMD_DESC_INACTIVE "INACTIVE\t- Mark the selected partition as inactive.\n"
     IDS_HELP_CMD_DESC_LIST "LIST\t\t- Display a list of objects.\n"
