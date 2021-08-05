@@ -207,33 +207,36 @@ MmTrimUserMemory(ULONG Target, ULONG Priority, PULONG NrFreedPages)
                 Process = Entry->Process;
                 Address = Entry->Address;
 
+                ObReferenceObject(Process);
+
+                if (!ExAcquireRundownProtection(&Process->RundownProtect))
+                {
+                    ObDereferenceObject(Process);
+                    MiReleasePfnLock(OldIrql);
+                    continue;
+                }
+
                 MiReleasePfnLock(OldIrql);
 
                 KeStackAttachProcess(&Process->Pcb, &ApcState);
+                MiLockProcessWorkingSet(Process, PsGetCurrentThread());
 
-                MmLockAddressSpace(&Process->Vm);
-
-                if (!Process->VmDeleted)
+                /* Be sure this is still valid. */
+                if (MmIsAddressValid(Address))
                 {
-                    MiLockProcessWorkingSetUnsafe(Process, PsGetCurrentThread());
+                    PMMPTE Pte = MiAddressToPte(Address);
+                    Accessed = Accessed || Pte->u.Hard.Accessed;
+                    Pte->u.Hard.Accessed = 0;
 
-                    /* Be sure this is still valid. */
-                    if (MmIsAddressValid(Address))
-                    {
-                        PMMPTE Pte = MiAddressToPte(Address);
-                        Accessed = Accessed || Pte->u.Hard.Accessed;
-                        Pte->u.Hard.Accessed = 0;
-
-                        /* There is no need to invalidate, the balancer thread is never on a user process */
-                        //KeInvalidateTlbEntry(Address);
-                    }
-
-                    MiUnlockProcessWorkingSet(Process, PsGetCurrentThread());
+                    /* There is no need to invalidate, the balancer thread is never on a user process */
+                    //KeInvalidateTlbEntry(Address);
                 }
 
-                MmUnlockAddressSpace(&Process->Vm);
+                MiUnlockProcessWorkingSet(Process, PsGetCurrentThread());
 
                 KeUnstackDetachProcess(&ApcState);
+                ExReleaseRundownProtection(&Process->RundownProtect);
+                ObDereferenceObject(Process);
             }
 
             if (!Accessed)
