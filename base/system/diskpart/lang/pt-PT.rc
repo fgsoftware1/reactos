@@ -12,7 +12,7 @@ Usage: DISKPART [/S filename] [/T timeout] [/?]\n\n\
 /T timeout\tTimeout in seconds to prevent DiskPart usage overlap.\n\
 /?\t\tDisplay this help message.\n\n"
     IDS_APP_LICENSE "Licenciado sob GNU GPLv2\n"
-    IDS_APP_CURR_COMPUTER "Não computador: %s\n\n"
+    IDS_APP_CURR_COMPUTER "Nome do computador: %s\n\n"
     IDS_APP_LEAVING "\nA sair de parcionamento de disco...\n"
     IDS_APP_PROMPT "DISKPART> "
 END
