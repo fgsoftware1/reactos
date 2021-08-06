@@ -63,5 +63,5 @@ END
 STRINGTABLE
 BEGIN
     ERROR_UNSUPPORTED_FORMAT "A área de transferência contém dados num formato não suportado"
-    ERROR_INVALID_FILE_FORMAT "O ficheiro selecionado nao é válido
+    ERROR_INVALID_FILE_FORMAT "O ficheiro selecionado nao é válido"
 END
