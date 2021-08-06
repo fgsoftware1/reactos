@@ -126,19 +126,18 @@ BEGIN
     IDS_HELP_CMD_DESC_RESCAN "RESCAN\t\t- Verifique novamente o computador em busca de discos e volumes.\n"
     IDS_HELP_CMD_DESC_RETAIN "RETAIN\t\t- Coloca uma partição retida sob um volume simples.\n"
     IDS_HELP_CMD_DESC_SAN "SAN\t\t- Mostra ou define a política de SAN para o sistema operacional atualmente inicializado.\n"
-    /*---------------------------------------until here------------------------------------------------*/
-    IDS_HELP_CMD_DESC_SELECT "SELECT\t\t- Shift the focus to an object.\n"
-    IDS_HELP_CMD_DESC_SETID "SETID\t\t- Change the partition type.\n"
-    IDS_HELP_CMD_DESC_SHRINK "SHRINK\t\t- Reduce the size of the selected volume.\n"
-    IDS_HELP_CMD_DESC_UNIQUEID "UNIQUEID\t- Displays or sets the GUID partition table (GPT) identifier\n\t\t  or master boot record (MBR) signature of a disk."
+    IDS_HELP_CMD_DESC_SELECT "SELECT\t\t- Muda o foco para um objeto.\n"
+    IDS_HELP_CMD_DESC_SETID "SETID\t\t- Muda o tipo de partição.\n"
+    IDS_HELP_CMD_DESC_SHRINK "SHRINK\t\t- Reduzir o tamanho do volume selecionado.\n"
+    IDS_HELP_CMD_DESC_UNIQUEID "UNIQUEID\t- Mostra ou define o identificador da tabela de partição GUID (GPT)\n\t\t  ou assinatura do master boot recorder (MBR) de um disco."
 END
 
 /* Common Error Messages */
 STRINGTABLE
 BEGIN
-    IDS_ERROR_MSG_NO_SCRIPT "Error opening script: %s\n"
-    IDS_ERROR_MSG_BAD_ARG "Error processing argument: %s\n"
-    IDS_ERROR_INVALID_ARGS "Invalid arguments\n"
+    IDS_ERROR_MSG_NO_SCRIPT "Erro ao abrir o script: %s\n"
+    IDS_ERROR_MSG_BAD_ARG "Erro ao processar o argumento: %s\n"
+    IDS_ERROR_INVALID_ARGS "Argumentos inválidos\n"
 END
 
 /* Active help descriptions */
@@ -147,7 +146,7 @@ BEGIN
     IDS_HELP_CMD_ACTIVE "\n\
 <Add active command help text here>\n\n"
 END
-
+/*---------------------------------------until here------------------------------------------------*/
 /* Add help descriptions */
 STRINGTABLE
 BEGIN
